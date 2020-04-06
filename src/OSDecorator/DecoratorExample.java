@@ -1,4 +1,4 @@
-package IO.OSDecorator;
+package OSDecorator;
 
 import java.io.*;
 
