@@ -1,0 +1,5 @@
+<person>
+   <name>Dasha</name>
+   <age>24</age>
+</person>
+<point x='5' y='-3'/>
