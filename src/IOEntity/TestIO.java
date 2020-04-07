@@ -3,7 +3,7 @@ package IOEntity;
 import java.io.*;
 import java.util.Arrays;
 
-// Создание IO классов (адаптеров), способных записывать/считывать определенные сущности(Person, Point)
+// Создание IO классов (адаптеров), способных записывать/считывать определенные сущности(Person, Point) в байтовый поток.
 public class TestIO {
     public static void main(String[] args) {
         Person person = new Person("Dasha", 24);
