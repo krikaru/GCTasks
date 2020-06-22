@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 
 public class HttpUtils {
+
     public static byte[] readRequest(InputStream in) throws IOException {
         byte[] buff = new byte[8*1024];
         int currentLength = 0;
@@ -31,9 +32,9 @@ public class HttpUtils {
             return false;
         }
         return buff[currentLength - 4] == '\r' &&
-                buff[currentLength - 4] == '\n' &&
-                buff[currentLength - 4] == '\r' &&
-                buff[currentLength - 4] == '\n';
+                buff[currentLength - 3] == '\n' &&
+                buff[currentLength - 2] == '\r' &&
+                buff[currentLength - 1] == '\n';
 
     }
 }
