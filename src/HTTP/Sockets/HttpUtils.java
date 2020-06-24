@@ -2,6 +2,7 @@ package HTTP.Sockets;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Arrays;
 
 public class HttpUtils {
@@ -27,6 +28,10 @@ public class HttpUtils {
         }
     }
 
+    public static void writeResponse(OutputStream out, String msg) throws IOException {
+        out.write(msg.getBytes());
+    }
+
     private static boolean isRequestEnd(byte[] buff, int currentLength){
         if (currentLength < 4 ){
             return false;
@@ -35,6 +40,5 @@ public class HttpUtils {
                 buff[currentLength - 3] == '\n' &&
                 buff[currentLength - 2] == '\r' &&
                 buff[currentLength - 1] == '\n';
-
     }
 }
