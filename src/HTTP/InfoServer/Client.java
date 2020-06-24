@@ -11,6 +11,8 @@ public class Client {
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
 
             out.write("Weather\n");
+//            out.write("Time\n");
+//            out.write("sgsrgrg");
             out.flush();
 
             System.out.println("Answer: " + in.readLine());
